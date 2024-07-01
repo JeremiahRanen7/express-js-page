@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Express - Node.js Web application framework</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="./favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./output.css">
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+        }
+
+        main {
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body class="font-primary dark:bg-black">
+    <header class="py-[4px] px-6 bg-stone-100 dark:bg-black fixed top-0 w-full">
+        <nav class="flex flex-row justify-between items-center">
+            <div class="lg:hidden block border border-gray-400 dark:border-white p-1 cursor-pointer dark:text-white">
+                <i class="fa-solid fa-bars fa-xl"></i>
+            </div>
+            <div class="p-2 lg:block hidden">
+                <a href="#" class="text-[26px] font-thin dark:text-white">Express</a>
+            </div>
+            <div class="p-2 lg:hidden block">
+                <a href="#" class="text-[26px] font-bold text-slate-700 dark:text-white">Express</a>
+            </div>
+            <div class="lg:flex flex-row justify-center items-center relative hidden">
+                <input type="text" placeholder="search" class="py-2 px-8 placeholder:font-primary placeholder:text-sm placeholder:font-thin border border-black rounded-sm">
+                <div class="absolute p-1 left-1">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>                  
+            </div>
+            <div class="lg:flex flex-row justify-center items-start space-x-4 text-sm text-stone-500 dark:text-white hidden">
+                <a href="#" class="text-black dark:text-white font-semibold">Home</a>
+                <a href="#">Getting started</a>
+                <a href="#">Guide</a>
+                <a href="#">API reference</a>
+                <a href="#">Advanced topics</a>
+                <a href="#">Resources</a>           
+            </div>
+            <button class="text-black dark:text-white cursor-pointer" id="toggleDark" onclick="document.body.classList.toggle('dark')">
+                <i class="fa-regular fa-moon fa-2xl dark:text-white"></i>
+            </button>     
+        </nav>
+    </header>
+    <main class="lg:pt-[190px] pt-[120px] lg:px-[68px] px-[45px] py-8 dark:bg-black">
+        <h1 class="text-6xl font-light lg:inline-block hidden dark:text-white">Express </h1> <span class="text-blue-400 text-xs lg:inline-block hidden"> 4.19.2</span>
+        <p class="max-w-[750px] lg:text-5xl text-3xl text-stone-400 font-thin py-3.5 tracking-wide">Fast, unopinionated, minimalist Web framework for <span class="text-blue-400"> Node.js</span></p>
+        <div class="border border-stone-200 dark:border-white font-mono p-2 text-xs font-thin dark:text-white max-w-[26%] mt-10 lg:block hidden">
+            $ npm install express --save
+        </div>
+        <div class="mt-8 px-4 pt-2 pb-2 bg-badge border border-dusk text-[13px] lg:w-[72%] max-w-full">
+            <p class="font-bold text-gray-600 mt-1.5"><i class="fa-solid fa-bullhorn"></i> Express 5.0 beta documentation is now available.</p>
+            <p class="font-normal my-2">The beta <span class="text-blue-400">API documentation</span> is a work in progress. For information on what’s in the release, see the Express <span class="text-blue-400">release history</span>.</p>
+        </div>
+        <div class="xl:w-[75%] lg:w-[80%] grid xl:grid-cols-4 lg:grid-cols-3 grid-cols-1 gap-12 mt-14 dark:text-white">
+            <div class="space-y-2">
+                <h2 class="text-2xl">Web Applications</h2>
+                <p class="text-sm text-gray-600 dark:text-white leading-[22px]">Express is a minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile applications.</p>
+            </div>
+            <div class="space-y-2">
+                <h2 class="text-2xl">APIs</h2>
+                <p class="text-sm text-gray-600 dark:text-white leading-[22px]">With a myriad of HTTP utility methods and middleware at your disposal, creating a robust API is quick and easy.</p>
+            </div>
+            <div class="space-y-2">
+                <h2 class="text-2xl">Performance</h2>
+                <p class="text-sm text-gray-600 dark:text-white leading-[22px]">Express provides a thin layer of fundamental web application features, without obscuring Node.js features that you know and love.</p>
+            </div>
+            <div class="space-y-2">
+                <h2 class="text-2xl">Middleware</h2>
+                <p class="text-sm text-gray-600 dark:text-white leading-[22px]">Express is a lightweight and flexible routing framework with minimal core features meant to be augmented through the use of Express <span class="text-blue-400">middleware</span> modules.</p>
+            </div>
+        </div>
+        <div class="mt-24 xl:max-w-[70%] lg:max-w-[75%] max-w-full">
+            <p class="md:text-xs text-[10px] text-gray-600 dark:text-white text-center">Documentation translations provided by StrongLoop/IBM: <span class="text-blue-400">French</span>, <span class="text-blue-400">German</span>, <span class="text-blue-400">Spanish</span>, <span class="text-blue-400">Italian</span>, <span class="text-blue-400">Japanese</span>, <span class="text-blue-400">Russian</span>, <span class="text-blue-400">Chinese</span>,<span class="text-blue-400">Traditional Chinese</span>,<span class="text-blue-400">Korean</span>, <span class="text-blue-400">Portuguese</span>.</p>
+            <p class="md:text-xs text-[10px] text-gray-600 dark:text-white text-center mt-1">Community translation available for: <span class="text-blue-400">Slovak</span>, <span class="text-blue-400">Ukrainian</span>, <span class="text-blue-400">Uzbek</span>, <span class="text-blue-400">Turkish</span> and <span class="text-blue-400">Thai</span>.</p>
+        </div>
+        <div class="lg:max-w-[75%] xl:max-w-[80%] max-w-full mt-6 flex justify-center items-center flex-wrap gap-3">
+            <div>
+                <img src="./images/netlify.svg" alt="" class="max-w-14">
+            </div>
+            <div class="text-xs bg-[#ebeff4] inline-block border border-slate-400 px-1 pb-[1px] rounded-sm">
+                <button><i class="fa-regular fa-star"></i> Star</button>
+            </div>
+            <div>
+                <p class="md:text-xs text-[10px] text-gray-600 dark:text-white"><span class="text-blue-400">Express</span> is a project of the <span class="text-blue-400">OpenJS Foundation</span>.</p>
+            </div>
+            <div>
+                <p class="text-blue-400 md:text-xs text-[10px]"><span class="text-gray-600"><i class="fa-solid fa-code-fork"></i></span> Fork the website on Github.</p>
+            </div>
+            <div>
+                <p class="md:text-xs text-[10px] text-gray-600 dark:text-white">Copyright © 2017 StrongLoop, IBM, and other expressjs.com contributors.</p>
+            </div>
+        </div>
+        <div class="lg:max-w-[75%] max-w-full mt-3 flex justify-center items-center gap-1 max-sm:gap-2 max-sm:ml-4">
+            <div>
+                <img src="./images/ccas.png" alt="">
+            </div>
+            <div>
+                <p class="md:text-xs text-[10px] text-gray-600 dark:text-white">
+                    This work is licensed under a <span class="md:text-xs text-[10px] text-blue-400">Creative Commons Attribution-ShareAlike 3.0 United States License</span>.
+                </p>
+            </div>
+        </div>
+    </main>
+    <script type="text/javascript">
+        document.addEventListener("DOMContentLoaded", () => {
+          const toggleDark = document.getElementById('toggleDark')
+          toggleDark.addEventListener('click', function() {
+            if(document.documentElement.classList.includes('dark')) {
+              document.documentElement.classList.remove('dark')
+            }
+            else {
+              document.documentElement.classList.add('dark')
+            }
+            alert("click!")
+          });
+        });
+      </script>
+</body>
+</html>
